@@ -1,0 +1,182 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0 auto;
+    width: 100%;
+    background: tan;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.work{
+    position: fixed;
+    display: flex;
+    height: 100%;
+}
+.fas{
+    font-size: 40px;
+}
+.title{
+    width: 32%;
+    height: 100%;
+    background-color: white;
+    padding: 50px;    
+}
+.avat{
+    width: 70%;
+    height: 200px;
+    object-fit:cover;  
+}
+.name{
+    cursor: pointer;   
+}
+.name::before, .footer::before{
+    content: "";
+    display: block;
+    width: 5px;
+    height: 3px;
+    background-color: brown;
+    border: 1px solid brown;
+    transition: all 900ms ease-in-out;
+}
+.name:hover::before, .footer:hover::before{
+    width: 100%;
+    border: 1px solid green;
+    background-color: green;
+}
+.type{
+    font-size: 20px;
+    margin: 1px;
+}
+.codeIcon, .code{   
+    font-size: 25px; 
+}
+.main_content::after{
+    content: "";
+    height: 150px;
+    display: block;
+}
+.footer{
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+.middle{
+    width: 18%;
+    display: flex;
+    text-align: right;
+    justify-content: flex-end;
+    background-color: white;
+    
+}
+.arrowUp , .arrowDown{
+      color: gray;    
+     margin: 15px ;
+    cursor: pointer;
+}
+.arrowUp:hover, .arrowDown:hover{
+    color: black; 
+}
+.contents{
+    margin:  0;
+    padding: 0;
+}
+.work_list{
+    padding: 9px  ;
+    list-style: none;
+    background: maroon;
+    color: white;
+    margin: 40px 0;
+    text-align: center; 
+    font-size: 18px;
+    border:5px groove pink;
+    border-radius: 0 60% 60% 0px;
+}
+.scroll{
+    width: 4px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    float: right;
+    border: 2px solid red;
+}
+.bench{
+    padding: 0;
+    margin: 0;   
+}
+.mark{
+    list-style:none;
+    padding: 0;
+    margin: 10px 0;  
+}
+.mark::after{
+    content: "_";
+    display: block;
+    color: gray; 
+}.screen{
+    width: 30%;
+    height: 100%;
+    position: relative;
+}
+.iconPosition{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    border-radius: 50%;
+    z-index: 5;
+}
+.iconContainer{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: yellow;
+    border-radius: 50%;
+}
+.backScale{
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background: red;
+    transform: scale(1);
+    transition: transform 350ms ease-in ;
+    border-radius: 50%;
+    cursor: pointer;    
+}
+.iconContainer:hover .backScale{
+    transform: scale(1.5);
+}
+.icon{
+    position: absolute;
+    left: 15px;
+    top: 5px;
+    cursor: pointer; 
+    color: white;
+}
+.close{
+   color: white;
+  //  position: absolute;
+    //top: 0;
+    opacity: 0;
+    font-size: 30px;
+    padding: 5px 0;
+  //  display: none;
+}
+.change{ 
+    top: -35px;
+}
+.icon.change .arrowRight{
+    opacity: 0;
+}
+.icon.change .close{
+    opacity: 1;
+}
+.prjctImg{
+    width: 100%;
+    height: 100%;
+    //object-fit: contain;
+   filter: grayscale(100%);
+    display: none;
+}
+.activeImg{
+    display: block;
+}
