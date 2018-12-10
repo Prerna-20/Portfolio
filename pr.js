@@ -3,71 +3,101 @@ var arrowDown = document.getElementById('arrowDown');
 var arrowUp = document.getElementById('arrowUp');
 var closeIcon = document.getElementById('close');
 var arrowRight = document.getElementById('arrowRight');
-var icon = document.getElementsByClassName('icon');
+var icon = document.getElementById('icon');
 var scrollBar = document.getElementById('scroll');
+var imgContainer = document.getElementById('imgContainer');
+var workName = document.getElementById('workName');
+var workType = document.getElementById('workType');
+var workCode = document.getElementById('workCode');
+var workList = document.getElementsByClassName('work_list');
+var titleContainer = document.getElementById('titleContainer');
+var typeContainer = document.getElementById('typeContainer');
+var codeContainer = document.getElementById('codeContainer');
+
 var height = 21;
 var clicked = 0;
+var ImgTrans = 0;
+var titleTrans = 0;
+var typeTrans = 0;
+var codeTrans = 0;
 
 function nextImg() {
-    if (clicked >= prjctImg.length) {
-       
-        clicked = prjctImg.length - 1;
-        prjctImg[clicked].classList.add("activeImg");
+    for (let i = 0; i < prjctImg.length; i++) {
+        workList[i].style.background = "maroon";
     }
-    else {
-        for (let i = 0; i < prjctImg.length; i++) {
-            prjctImg[i].classList.remove("activeImg");
-        }
-        prjctImg[clicked].classList.add("activeImg");
-    }
+    imgContainer.style.top = "-" + ImgTrans + "%";
+    workList[clicked].style.background = "Purple";
+    titleContainer.style.transform = "translateY(-" + titleTrans + "px)";
+    typeContainer.style.transform = "translateY(-" + typeTrans + "px)";
+    codeContainer.style.transform = "translateY(-" + codeTrans + "px)";
 }
+
 function prevImg() {
     for (let i = 0; i < prjctImg.length; i++) {
-        prjctImg[i].classList.remove("activeImg");
+        workList[i].style.background = "maroon";
     }
-    if (clicked < 0) {
-        if (height >100) {
-            prjctImg[prjctImg.length].classList.add("activeImg");
-        }
-        clicked = 0;
-    }      
-        prjctImg[clicked].classList.add("activeImg");
-    }
+    imgContainer.style.top = "-" + ImgTrans + "%";
+    workList[clicked].style.background = "Purple";
+    titleContainer.style.transform = "translateY(-" + titleTrans + "px)";
+    typeContainer.style.transform = "translateY(-" + typeTrans + "px)";
+    codeContainer.style.transform = "translateY(-" + codeTrans + "px)";
+}
 
 function scrollUp() {
-    if (height < 0) {
+    /*  Top Functionality  */
+    if (height <= 21) {
         height = 0;
+        ImgTrans = 0;
+    }
+    /*  Bottom Functionality  */
+    else if (height >= 100) {
+        height = 81;
+        clicked = prjctImg.length - 1;
+        ImgTrans = 400;
     }
     else {
         height -= 15;
+        clicked--;
+        ImgTrans -= 100;
+        titleTrans -= workName.clientHeight;
+        typeTrans -= workType.clientHeight;
+        codeTrans -= workCode.clientHeight;
     }
     scrollBar.style.height = height + "%";
 }
 function scrollDown() {
-    if (height >= 100) {
+    /*  Top Functionality  */
+    if (height <= 0) {
+        height = 21;
+        clicked = 0;
+    }
+    /*  Bottom Functionality  */
+    else if (height >= 81) {
         height = 100;
+        ImgTrans = 400;
     }
     else {
         height += 15;
+        clicked++;
+        ImgTrans += 100;
+        titleTrans += workName.clientHeight;
+        typeTrans += workType.clientHeight;
+        codeTrans += workCode.clientHeight;
     }
     scrollBar.style.height = height + "%";
 }
 
 arrowDown.addEventListener('click', function () {
-    
-   
-    clicked++;
     scrollDown();
     nextImg();
 });
 arrowUp.addEventListener('click', function () {
-    clicked--;
     scrollUp();
     prevImg();
 });
 arrowRight.addEventListener('click', function () {
-    icon[0].classList.add('change');
+    icon.classList.add('change');
 });
 closeIcon.addEventListener('click', function () {
-    icon[0].classList.remove('change');
+    icon.classList.remove('change');
 });
