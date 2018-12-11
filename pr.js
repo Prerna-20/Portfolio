@@ -1,3 +1,4 @@
+var work = document.getElementById('work');
 var prjctImg = document.getElementsByClassName('prjctImg');
 var arrowDown = document.getElementById('arrowDown');
 var arrowUp = document.getElementById('arrowUp');
@@ -14,12 +15,16 @@ var titleContainer = document.getElementById('titleContainer');
 var typeContainer = document.getElementById('typeContainer');
 var codeContainer = document.getElementById('codeContainer');
 
+
+
 var height = 21;
 var clicked = 0;
 var ImgTrans = 0;
 var titleTrans = 0;
 var typeTrans = 0;
 var codeTrans = 0;
+
+
 
 function nextImg() {
     for (let i = 0; i < prjctImg.length; i++) {
@@ -100,4 +105,26 @@ arrowRight.addEventListener('click', function () {
 });
 closeIcon.addEventListener('click', function () {
     icon.classList.remove('change');
+});
+
+
+
+
+
+
+
+var aboutContact = document.getElementById('aboutContact');
+var footer = document.getElementById('footer');
+var middle = document.getElementsByClassName('middle')[0];
+var screen = document.getElementsByClassName('screen')[0];
+var wrap = document.getElementById('wrap');
+footer.addEventListener('click', function () {
+    console.log("Animation Applied");
+    wrap.classList.toggle('slideLeft');
+    
+    //middle.style.display = "none";
+    //screen.style.display = "none";
+ //   aboutContact.style.width = "50%";
+   // work.style.marginLeft = "50%";
+  
 });

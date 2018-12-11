@@ -6,31 +6,70 @@ body {
     margin: 0 auto;
     width: 100%;
     background: tan;
+    overflow: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.work {
-    position: fixed;
-    display: flex;
-    height: 100%;
+.wrap {
+    background: green;
     width: 100%;
+    position: relative;
+}
+
+.socialContainer {
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.social>p{
+    margin: 0;
+}
+.work {
+    position: absolute;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    left: 0;
+}
+
+.slideLeft {
+    animation: slideLeft 2s ease-in 0s normal forwards;
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(50%);
+    }
+}
+
+.aboutContact {
+    position: absolute;
+    left: -50%;
+    width: 50%;
+    height: 100vh;
+    background: black;
+    display: inline-block;
+    color: beige;
 }
 
 .fas {
     font-size: 40px;
 }
 
-.title {
+.home {
     width: 38%;
     height: 100%;
     background-color: white;
     padding: 50px;
 }
 
-.main_content::after {
+.main_content::after, .email::after {
     content: "";
     height: 120px;
-    ;
     display: block;
 }
 
@@ -59,7 +98,7 @@ body {
     height: 35px;
 }
 
-.workTitle::before, .footer::before {
+.workTitle::before, .footer::before, .social::before, .email::before {
     content: "";
     display: block;
     width: 5px;
@@ -241,11 +280,15 @@ body {
 }
 
 .close {
-    color: white; //  position: absolute;
-    //top: 0;
+    color: white;
     opacity: 0;
     font-size: 30px;
-    padding: 5px 0; //  display: none;
+    padding: 5px 0;
+    /*
+    position: absolute;
+    top: 0;
+    display: none;
+    */
 }
 
 .change {
