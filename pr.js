@@ -102,29 +102,50 @@ arrowUp.addEventListener('click', function () {
 });
 arrowRight.addEventListener('click', function () {
     icon.classList.add('change');
+    wrap.classList.add('slideLeftImg');
+    wrap.classList.remove('slideRightImg');
+
 });
 closeIcon.addEventListener('click', function () {
     icon.classList.remove('change');
+    wrap.classList.add('slideRightImg');
+    wrap.classList.remove('slideLeftImg');
+
 });
 
-
-
-
-
-
-
-var aboutContact = document.getElementById('aboutContact');
 var footer = document.getElementById('footer');
-var middle = document.getElementsByClassName('middle')[0];
-var screen = document.getElementsByClassName('screen')[0];
+var toAbout = document.getElementById('toAbout');
+var transContainer = document.getElementById('transContainer');
+
+var home = document.getElementById('home');
+var screenshot = document.getElementById('screenshot');
 var wrap = document.getElementById('wrap');
-footer.addEventListener('click', function () {
-    console.log("Animation Applied");
-    wrap.classList.toggle('slideLeft');
-    
-    //middle.style.display = "none";
-    //screen.style.display = "none";
- //   aboutContact.style.width = "50%";
-   // work.style.marginLeft = "50%";
-  
+toAbout.addEventListener('click', function () {
+    console.log("toAbout");
+    wrap.classList.add('slideRight');
+    wrap.classList.remove('slideLeft');
+    transContainer.style.transform = "translateY(-" + footer.clientHeight + "px)";
+    home.style.width = "63%";
 });
+toHome.addEventListener('click', function () {
+    console.log("toAbout");
+    wrap.classList.add('slideLeft');
+    wrap.classList.remove('slideRight');
+    transContainer.style.transform = "translateY(0)";
+    home.style.width = "38%";
+});
+/*
+arrowRight.addEventListener('click', function () {
+    console.log("toAbout");
+    wrap.classList.add('slideRight');
+    wrap.classList.remove('slideLeft');
+    
+    home.style.width = "63%";
+});
+close.addEventListener('click', function () {
+    console.log("toAbout");
+    wrap.classList.remove('slideLeft');
+    wrap.classList.add('slideRight');
+    transContainer.style.transform = "translateY(0)";
+    home.style.width = "38%";
+});*/
