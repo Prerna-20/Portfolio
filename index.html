@@ -1,132 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Charmonman|Merienda" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="css/portfolio.css">
     <title>Portfolio</title>
 </head>
+
 <body>
     <div class="wrapper">
+
         <div id="prgContainer" class="prgContainer">
-            <span class="progress"></span>
+            <span class="progress" id="progress"></span>
             <span id="counter" class="counter"> </span>
         </div>
         <div class="intro" id="intro">
             <h1 class="hello">Hello Guys !</h1>
             <p class="name">I am Prerna Chauhan.<br> I am a Web Developer.<br>
-           Click below to view some of my works. </p>
-           <i class="fas fa-angle-double-down down"></i>
-           <i class="fas fa-laptop-code workIcon" id="workIcon"></i>
+                Click below to view some of my works. </p>
+            <i class="fas fa-angle-double-down down"></i>
+            <i class="fas fa-laptop-code workIcon" id="workIcon"></i>
         </div>
-        <div class="work" id="work">
-            <div class="title">
-                <div class="main_content">
-                    <img src="img/bird.png" alt="Bird" class="avatar">
-                    <div class="workName" id="workName">
-                        <ul class="titleContainer" id="titleContainer">
-                            <li class="workTitle">
-                                <p>News Feed Tiles</p>
+
+        <div class="sliderMain" id="sliderMain">
+            <div class="wrap" id="wrap">
+                <div class="aboutContact" id="aboutContact">
+                    <div class="headerInfo">
+                        <div class="about">
+                            <p> I'm a web developer based in Ghaziabad, India. I have a passion for web development and
+                                love to
+                                develop
+                                applications
+                                for Dekstop, mobile & other Smart devices. I know how to create a website to run across
+                                devices
+                                using the
+                                latest technologies available.<br>
+                                I am currently looking for jobs in Web Development . Sooo... Reach me if you have any
+                                work for
+                                me, or in
+                                case you just
+                                wanna say Hi.!!</p>
+
+                        </div>
+                        <div class="email">
+                            <p>prerna.2012@gmail.com</p>
+                        </div>
+
+                    </div>
+                    <div class="contact">
+                        <ul class="socialContainer">
+                            <li class="social">
+                                <p>Instagram</p>
                             </li>
-                            <li class="workTitle">
-                                <p>Responsive Tab Menu</p>
+                            <li class="social">
+                                <p>Facebook</p>
                             </li>
-                            <li class="workTitle">
-                                <p>Pure Javascript Utilities</p>
+                            <li class="social">
+                                <p>GitHub</p>
                             </li>
-                            <li class="workTitle">
-                                <p>Solar System</p>
-                            </li>
-                            <li class="workTitle">
-                                <p>Fetching Github User Data</p>
+                            <li class="social">
+                                <p>LinkedIn</p>
                             </li>
                         </ul>
                     </div>
-                    <div class="workType" id="workType">
-                        <ul class="typeContainer" id="typeContainer">
-                            <li class="type">
-                                <p>UI/Responsive</p>
-                            </li>
-                            <li class="type">
-                                <p>UI / Vanilla JS / Responsive</p>
-                            </li>
-                            <li class="type">
-                                <p>Vanilla JavaScript</p>
-                            </li>
-                            <li class="type">
-                                <p>UI Development</p>
-                            </li>
-                            <li class="type">
-                                <p>JS API CALL</p>
+                </div>
+                <div class="work" id="work">
+
+                    <div class="home" id="home">
+                        <div class="main_content">
+                            <img src="img/bird.png" alt="Bird" class="avatar">
+                            <div class="workInfo">
+                                <div class="workName" id="workName">
+                                    <ul class="titleContainer" id="titleContainer">
+                                        <li class="workTitle">
+                                            <p>News Feed Tiles</p>
+                                        </li>
+                                        <li class="workTitle">
+                                            <p>Responsive Tab Menu</p>
+                                        </li>
+                                        <li class="workTitle">
+                                            <p>Pure Javascript Utilities</p>
+                                        </li>
+                                        <li class="workTitle">
+                                            <p>Solar System</p>
+                                        </li>
+                                        <li class="workTitle">
+                                            <p>Fetching Github User Data</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="workType" id="workType">
+                                    <ul class="typeContainer" id="typeContainer">
+                                        <li class="type">
+                                            <p>UI/Responsive</p>
+                                        </li>
+                                        <li class="type">
+                                            <p>UI / Vanilla JS / Responsive</p>
+                                        </li>
+                                        <li class="type">
+                                            <p>Vanilla JavaScript</p>
+                                        </li>
+                                        <li class="type">
+                                            <p>UI Development</p>
+                                        </li>
+                                        <li class="type">
+                                            <p>JS API CALL</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="workCode" id="workCode">
+                                    <div class="codeContainer" id="codeContainer">
+                                        <p class="code"><i class="fas fa-file-code codeIcon"></i>Pure CSS</p>
+                                        <p class="code"><i class="fas fa-file-code codeIcon"></i>CSS + JavaScript</p>
+                                        <p class="code"><i class="fas fa-file-code codeIcon"></i>Pure JavaScript</p>
+                                        <p class="code"><i class="fas fa-file-code codeIcon"></i>Pure CSS</p>
+                                        <p class="code"><i class="fas fa-file-code codeIcon"></i>CSS + JavaScript</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer" id="footer">
+                            <ul class="transContainer" id="transContainer">
+                                <li class="leftPage" id="toAbout">
+                                    <p>About/Contact</p>
+                                </li>
+                                <li class="leftPage" id="toHome">
+                                    <p>Home</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="middle">
+                        <div class="index">
+                            <i class="fas fa-hand-point-up arrowUp" id="arrowUp"></i>
+                            <ul class="contents">
+                                <li class="work_list">News Feed Tiles</li>
+                                <li class="work_list">Responsive Tab Menu</li>
+                                <li class="work_list">Pure Javascript Utilities</li>
+                                <li class="work_list">Solar System</li>
+                                <li class="work_list">Fetching Github User Data</li>
+                            </ul>
+                            <i class="fas fa-hand-point-down arrowDown" id="arrowDown"></i>
+                        </div>
+                        <div class="track">
+                            <div class="scroll" id="scroll"></div>
+                            <ul class="bench">
+                                <li class="mark"></li>
+                                <li class="mark"></li>
+                                <li class="mark"></li>
+                                <li class="mark"></li>
+                                <li class="mark"></li>
+                                <li class="mark"></li>
+                                <li class="mark"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="screenshot" id="screenshot">
+                        <div class="iconPosition">
+                            <div class="iconContainer">
+                                <div class="backScale"></div>
+                                <div class="icon" id="icon">
+                                    <i class="fas fa-angle-right arrowRight" id="arrowRight"></i>
+                                    <i class="fas fa-times close " id="close"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="imgContainer" id="imgContainer">
+                            <img src="img/NewsFeed.png" alt="News Feed Grid Layout" class="prjctImg">
+                            <img src="img/ResponsiveTabb.png" alt="Responsive Tab Menu" class="prjctImg">
+                            <img src="img/PureJSUtilities.png" alt="Pure JS Utilities" class="prjctImg">
+                            <img src="img/SolarSystem.png" alt="Solar System" class="prjctImg">
+                            <img src="img/GitHubDataExtractionn.png" alt="GitHub Data Extraction" class="prjctImg">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="rightPage">
+                    <div class="workDetail">
+                        <ul class="detailContainer">
+                            <li class="detail">
+                                <p class="workTitle">News Feed Tiles</p>
+                                <p class="type">UI/Responsive 0</p>
+                                <p class="code"><i class="fas fa-file-code codeIcon"></i>Pure CSS 0</p>
+                                <p class="description">
+                                    I worked on creating completely Responsive News Tiles in a grid layout which can
+                                    run across Desktop, Tablets & Mobies.
+                                </p>
+                                <a href="https://prerna-20.github.io/News-Feed-Grid-Layout/" target="_blank" class="viewOnline">View
+                                    Online</a>
+                                <button class="snapsBtn" id="snapsBtn">View Snapshots</button>
+
+                                <!------------------------------------ WORK SCREENSHOTS SLIDESHOW ------------------------------------>
+
+                                <div class="slideContainer" id="slideContainer">
+                                    <i class="far fa-times-circle closeSlide" id="closeSlide"></i>
+                                    <div class="slideContent">
+                                        <p class="slideNumber" id="slideNumber"></p>
+                                        <div class="slides active">
+                                            <img src="img/NewsFeed_Laptop.png" class="slideImg" alt="">
+                                            <div class="captionContainer">
+                                                <p class="caption">News Feed Laptop Screen</p>
+                                            </div>
+                                        </div>
+                                        <div class="slides">
+                                            <img src="img/NewsFeed_Tab.png" class="slideImg" alt="">
+                                            <div class="captionContainer">
+                                                <p class="caption">News Feed Tablet Screen</p>
+                                            </div>
+                                        </div>
+                                        <div class="slides">
+                                            <img src="img/NewsFeed_Galaxy5s.png" class="slideImg" alt="">
+                                            <div class="captionContainer">
+                                                <p class="caption">News Feed Galaxy 5S and other Mobile Screens</p>
+                                            </div>
+                                        </div>
+                                        <div class="slides">
+                                            <img src="img/NewsFeed_iPhone.png" class="slideImg" alt="">
+                                            <div class="captionContainer">
+                                                <p class="caption">News Feed IPhone Screen</p>
+                                            </div>
+                                        </div>
+                                        <p class="prevSlide disable" id="prevSlide">&#10094;</p>
+                                        <p class="nextSlide" id="nextSlide">&#10095;</p>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                     </div>
-                    <div class="workCode" id="workCode">
-                        <div class="codeContainer" id="codeContainer">
-                            <span class="code"><i class="fas fa-file-code codeIcon"></i>Pure CSS</span>
-                            <span class="code"><i class="fas fa-file-code codeIcon"></i>CSS + JavaScript</span>
-                            <span class="code"><i class="fas fa-file-code codeIcon"></i>Pure JavaScript</span>
-                            <span class="code"><i class="fas fa-file-code codeIcon"></i>Pure CSS</span>
-                            <span class="code"><i class="fas fa-file-code codeIcon"></i>CSS + JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer">
-                    <h4>About/Contact</h4>
-                </div>
-            </div>
-            <div class="middle">
-                <div class="index">
-                    <i class="fas fa-hand-point-up arrowUp" id="arrowUp"></i>
-                    <ul class="contents">
-                        <li class="work_list">News Feed Tiles</li>
-                        <li class="work_list">Responsive Tab Menu</li>
-                        <li class="work_list">Pure Javascript Utilities</li>
-                        <li class="work_list">Solar System</li>
-                        <li class="work_list">Fetching Github User Data</li>
-                    </ul>
-                    <i class="fas fa-hand-point-down arrowDown" id="arrowDown"></i>
-                </div>
-                <div class="track">
-                    <div class="scroll" id="scroll"></div>
-                    <ul class="bench">
-                        <li class="mark"></li>
-                        <li class="mark"></li>
-                        <li class="mark"></li>
-                        <li class="mark"></li>
-                        <li class="mark"></li>
-                        <li class="mark"></li>
-                        <li class="mark"></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="screen">
-                <div class="iconPosition">
-                    <div class="iconContainer">
-                        <div class="backScale"></div>
-                        <div class="icon" id="icon">
-                            <i class="fas fa-angle-right arrowRight" id="arrowRight"></i>
-                            <i class="fas fa-times close " id="close"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="imgContainer" id="imgContainer">
-                    <img src="img/NewsFeed.png" alt="News Feed Grid Layout" class="prjctImg">
-                    <img src="img/ResponsiveTabb.png" alt="Responsive Tab Menu" class="prjctImg">
-                    <img src="img/PureJSUtilities.png" alt="Pure JS Utilities" class="prjctImg">
-                    <img src="img/SolarSystem.png" alt="Solar System" class="prjctImg">
-                    <img src="img/GitHubDataExtractionn.png" alt="GitHub Data Extraction" class="prjctImg">
                 </div>
             </div>
         </div>
-
-        
-        
-
     </div>
     <script src="js/portfolio.js"></script>
 </body>
+
 </html>
