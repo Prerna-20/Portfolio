@@ -75,13 +75,14 @@ function slideShow(val) {
         prevSlide[val].classList.add('disable');
         nextSlide[val].classList.remove('disable');
         slideIndex = 0;
-    });
-    closeSlide[val].addEventListener('click', function () {
-        slideContainer[val].classList.remove('open');
         for (let i = 0; i < totalSlides; i++) {
             slideArray[i].className = slideInitClass;
         }
         slideArray[0].classList.add('active');
+    });
+    closeSlide[val].addEventListener('click', function () {
+        slideContainer[val].classList.remove('open');
+   
     });
     nextSlide[val].addEventListener('click', function () {
         for (i = 0; i < totalSlides; i++) {
@@ -95,12 +96,11 @@ function slideShow(val) {
         else {
             if (slideIndex == slideArray.length - 2) {
                 nextSlide[val].classList.add('disable');
-            }
+            }            
             slideArray[slideIndex].classList.add('slidePrev');
             slideArray[slideIndex + 1].classList.add('active');
-        }
-        slideIndex++;
-
+            slideIndex++;
+        }        
         slideNumber[val].innerHTML = slideIndex + 1 + "/" + totalSlides;
     });
 
@@ -134,9 +134,9 @@ function nextImg() {
     typeContainer.style.transform = "translateY(-" + typeTrans + "px)";
     codeContainer.style.transform = "translateY(-" + codeTrans + "px)";
     detailContainer.style.transform = "translateY(-" + ImgTrans + "%)";
-    if (currentImg > 0) {
+  /*  if (currentImg > 0) {
         slideShow(currentImg);
-    }
+    }*/
 }
 
 function prevImg() {
@@ -149,12 +149,8 @@ function prevImg() {
     typeContainer.style.transform = "translateY(-" + typeTrans + "px)";
     codeContainer.style.transform = "translateY(-" + codeTrans + "px)";
     detailContainer.style.transform = "translateY(-" + ImgTrans + "%)";
-    if (currentImg > 0) {
-        slideShow(currentImg);
-    }
-    else {
-        slideShow(0);
-    }
+        
+
 }
 
 function scrollUp() {
@@ -216,10 +212,12 @@ workIcon.addEventListener('click', function () {
 arrowDown.addEventListener('click', function () {
     scrollDown();   // All variables modified based on height of scroll
     nextImg();      //Displays content which is transitioned on click
+    slideShow(currentImg);
 });
 arrowUp.addEventListener('click', function () {
     scrollUp();     // All variables modified based on height of scroll
     prevImg();      //Displays content which is transitioned on click
+    slideShow(currentImg);
 });
 
 /*------------------- SLIDE LEFT TO ABOUT AND CONTACT DETAILS   -------------------*/
