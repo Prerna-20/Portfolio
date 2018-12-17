@@ -28,7 +28,7 @@ body {
     height: 0%;
     display: block;
     background-color: red;
-    animation: prg_bar 3s cubic-bezier(.86, .33, .43, .88) 0s 1;
+    animation: prg_bar 3.5s cubic-bezier(.86, .12, .38, .79) 0s 1;
     animation-fill-mode: forwards;
 }
 
@@ -243,7 +243,7 @@ body {
     padding: 50px;
 }
 
-.main_content::after, .headerInfo::after, .description::after {
+.main_content::after, .headerInfo::after {
     content: "";
     height: 100px;
     display: block;
@@ -301,7 +301,7 @@ body {
 .titleContainer, .typeContainer, .codeContainer, .transContainer, .linkList, .detailContainer {
     position: absolute;
     transform: translateY(0%);
-    transition: all 1s ease-in;
+    transition: all 550ms ease-in;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -509,7 +509,7 @@ body {
 .imgContainer {
     position: absolute;
     top: 0;
-    transition: top 1s ease-in;
+    transition: top 550ms ease-in;
     overflow: hidden;
 }
 
@@ -523,11 +523,13 @@ body {
 }
 
 .detailContainer {
-    padding: 50px;
+    height: 100%;
 }
 
 .detail {
     list-style: none;
+    padding: 50px;
+    height: 100%;
 }
 
 .detail>.workTitle {
@@ -539,7 +541,8 @@ body {
 .description {
     font-size: 22px;
     padding: 20px 0;
-    text-indent: 50px;
+    height: 200px;
+    word-spacing: 4px;
 }
 
 .slideUp {
@@ -592,11 +595,12 @@ body {
     height: 100%;
     width: 100%;
     transform: scale(0);
-    transition: background-color 550ms ease-in, transform 100ms ease-in 550ms;
+    /* transition: background-color 550ms ease-in, transform 100ms ease-in 550ms;*/
     /*Slideshow Close transition*/
 }
 
 .open {
+    top: 0;
     transform: scale(1);
     background-color: rgba(0, 0, 0, 0.9);
     transition: background-color 550ms ease-in 80ms;
@@ -621,13 +625,13 @@ body {
     overflow: hidden;
     height: 100vh;
     transform: scale(0);
-    transition: transform 750ms ease-out;
+    transition: transform 250ms ease;
     /*Slideshow close transition*/
 }
 
 .slideContainer.open>.slideContent {
     transform: scale(1);
-    transition: transform 750ms ease-in;
+    transition: transform 550ms ease-in;
 }
 
 .slideNumber {
@@ -648,13 +652,17 @@ body {
     margin: 0px auto;
     opacity: 0;
     transform: translateX(100%);
-    transition: all ease-in 550ms;
+    transition: all 500ms ease-out;
 }
 
 .slideImg {
     width: 70%;
     height: 500px;
     object-fit: contain;
+}
+
+.liveDemo {
+    width: 90%;
 }
 
 .active {
