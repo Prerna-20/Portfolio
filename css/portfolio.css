@@ -5,7 +5,6 @@
 body {
     margin: 0 auto;
     width: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .wrapper {
@@ -78,27 +77,28 @@ body {
 }
 
 .hello {
-    font-size: 70px;
+    font-size: 80px;
     font-family: 'Merienda', cursive;
 }
 
 .name {
-    padding: 10px;
-    font-family: 'Charmonman', cursive;
-    font-size: 30px;
-    font-weight: bold;
+    padding: 20px;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    font-family: 'Kalam', cursive;
+    font-size: 40px;
     margin: 0;
 }
 
 .workIcon {
     margin: 40px 0;
     cursor: pointer;
-    display: block;
 }
 
 .down {
     opacity: 0;
-    color: yellowgreen;
+    display: block;
+    color: #39ff14;
     animation: animate 1s ease-in 0s infinite normal forwards;
 }
 
@@ -149,14 +149,18 @@ body {
     height: 100vh;
 }
 
+.headerInfo {
+    font-family: 'Philosopher', sans-serif;
+}
+
 .about {
-    font-size: 22px;
+    font-size: 25px;
     display: inline-block;
     cursor: pointer;
 }
 
 .email {
-    font-size: 18px;
+    font-size: 22px;
     display: inline-block;
     cursor: pointer;
 }
@@ -166,6 +170,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .social>p, .leftPage>p {
@@ -254,9 +259,9 @@ body {
 }
 
 .avatar {
-    width: 70%;
+    width: 100%;
     height: 200px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .workName, .workType, .workCode, .footer, .workLink {
@@ -271,11 +276,11 @@ body {
 }
 
 .workType {
-    height: 25px;
+    height: 28px;
 }
 
 .workCode {
-    height: 35px;
+    height: 40px;
 }
 
 .workTitle::before, .leftPage::before, .about::before, .social::before, .email::before, .description::before {
@@ -312,10 +317,11 @@ body {
     padding: 6px 0;
     cursor: pointer;
     width: fit-content;
+    font-family: 'Amaranth', sans-serif;
 }
 
 .workTitle>p {
-    font-size: 33px;
+    font-size: 35px;
     font-weight: bold;
     margin: 0;
 }
@@ -324,6 +330,8 @@ body {
     font-size: 16px;
     list-style: none;
     padding: 2px 0;
+    font-family: 'Merienda', cursive;
+    font-weight: 600;
 }
 
 .type>p, .code {
@@ -336,6 +344,7 @@ body {
 
 .code {
     padding: 1px 0;
+    font-family: 'Kalam', cursive;
 }
 
 .footer {
@@ -343,6 +352,9 @@ body {
     cursor: pointer;
     height: 40px;
     margin-top: 20px;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .leftPage {
@@ -459,7 +471,7 @@ body {
 }
 
 .iconContainer:hover .backScale {
-    transform: scale(1.5);
+    transform: scale(1.25);
 }
 
 .icon {
@@ -470,7 +482,8 @@ body {
     color: white;
     text-align: center;
     width: 50px;
-    height: 90px;;
+    height: 90px;
+    ;
 }
 
 .close {
@@ -485,10 +498,11 @@ body {
     display: none;
     */
 }
-.arrowRight{
+
+.arrowRight {
     display: block;
     border-radius: 50px;
-    padding: 5px;   
+    padding: 5px;
 }
 
 .change {
@@ -548,10 +562,13 @@ body {
 }
 
 .description {
-    font-size: 22px;
+    font-size: 25px;
     padding: 20px 0;
     height: 200px;
     word-spacing: 4px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    font-family: 'Philosopher', sans-serif;
 }
 
 .slideUp {

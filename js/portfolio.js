@@ -27,7 +27,6 @@ var home = document.getElementById('home');
 var screenshot = document.getElementById('screenshot');
 var detailContainer = document.getElementById('detailContainer');
 var snapsBtn = document.getElementsByClassName('snapsBtn');
-
 var slideContainer = document.getElementsByClassName('slideContainer');
 var slides = document.getElementsByClassName('slides')[0];
 var nextSlide = document.getElementsByClassName('nextSlide');
@@ -47,8 +46,6 @@ var slideIndex;
 var wrapClasses;
 const initClass = wrap.classList[0]; //DEFAULT CLASS FOR WRAP DIV
 const slideInitClass = slides.classList[0];   //DEFAULT CLASS FOR SLIDES DIV
-
-
 
 /********************************************************* FUNCTIONS *********************************************************/
 
@@ -82,7 +79,7 @@ function slideShow(val) {
     });
     closeSlide[val].addEventListener('click', function () {
         slideContainer[val].classList.remove('open');
-   
+
     });
     nextSlide[val].addEventListener('click', function () {
         for (i = 0; i < totalSlides; i++) {
@@ -96,11 +93,11 @@ function slideShow(val) {
         else {
             if (slideIndex == slideArray.length - 2) {
                 nextSlide[val].classList.add('disable');
-            }            
+            }
             slideArray[slideIndex].classList.add('slidePrev');
             slideArray[slideIndex + 1].classList.add('active');
             slideIndex++;
-        }        
+        }
         slideNumber[val].innerHTML = slideIndex + 1 + "/" + totalSlides;
     });
 
@@ -121,7 +118,6 @@ function slideShow(val) {
         }
         slideNumber[currentImg].innerHTML = slideIndex + 1 + "/" + totalSlides;
     });
-
 }
 
 function nextImg() {
@@ -134,9 +130,9 @@ function nextImg() {
     typeContainer.style.transform = "translateY(-" + typeTrans + "px)";
     codeContainer.style.transform = "translateY(-" + codeTrans + "px)";
     detailContainer.style.transform = "translateY(-" + ImgTrans + "%)";
-  /*  if (currentImg > 0) {
-        slideShow(currentImg);
-    }*/
+    /*  if (currentImg > 0) {
+          slideShow(currentImg);
+      }*/
 }
 
 function prevImg() {
@@ -149,18 +145,16 @@ function prevImg() {
     typeContainer.style.transform = "translateY(-" + typeTrans + "px)";
     codeContainer.style.transform = "translateY(-" + codeTrans + "px)";
     detailContainer.style.transform = "translateY(-" + ImgTrans + "%)";
-        
-
 }
 
 function scrollUp() {
     /*  Top Functionality  */
     if (height <= 21) {
-        height = 0;
+        height = 21;
         ImgTrans = 0;
     }
     /*  Bottom Functionality  */
-    else if (height >= 100) {
+    else if (height > 81) {
         height = 81;
         currentImg = prjctImg.length - 1;
         ImgTrans = 400;
@@ -178,13 +172,13 @@ function scrollUp() {
 }
 function scrollDown() {
     /*  Top Functionality  */
-    if (height <= 0) {
+    if (height < 21) {
         height = 21;
         currentImg = 0;
     }
     /*  Bottom Functionality  */
     else if (height >= 81) {
-        height = 100;
+        height = 81;
         ImgTrans = 400;
     }
     else {
@@ -201,12 +195,12 @@ function scrollDown() {
 /********************************************************* ON CLICK EVENT LISTENERS *********************************************************/
 
 /*------------------- SLIDE UP MAIN SCREEN -------------------*/
+
 workIcon.addEventListener('click', function () {
     intro.style.color = "rgb(255,255,255,0.6)";
-
     sliderMain.classList.add('slideUp');
-
 });
+
 /*------------------- SLIDE IMAGE UP AND DOWN  -------------------*/
 
 arrowDown.addEventListener('click', function () {
